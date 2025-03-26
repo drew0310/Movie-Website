@@ -50,7 +50,7 @@ const Home = () => {
     checkTokenValidity();
     const interval = setInterval(checkTokenValidity, 30000);
     return () => clearInterval(interval);
-  }, []);
+  });
 
   const handleLogout = () => {
     sessionStorage.clear();
