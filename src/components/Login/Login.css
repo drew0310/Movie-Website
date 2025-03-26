@@ -1,0 +1,89 @@
+.login {
+    height: 100vh;
+    background-image: url("../../../public/movieposters.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .login::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.9) 100%);
+    z-index: 1;
+  }
+  
+  .login__overlay {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fe9700;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+  }
+  
+  .login__overlay h2 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .login__form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .login__input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #fe9700;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+    outline: none;
+  }
+  
+  .login__input::placeholder {
+    color: #aaa;
+  }
+  
+  .login__error {
+    color: #ff0000;
+    font-size: 1.5rem;
+    text-align: left;
+    margin-top: -10px;
+  }
+
+  .login__success {
+    color: #90ee90;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  @keyframes fadeInMain {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .login__overlay {
+    animation: fadeInMain 0.8s ease-out 0.05s both;
+  }

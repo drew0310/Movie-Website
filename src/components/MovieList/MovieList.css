@@ -1,0 +1,46 @@
+
+.list__title {
+    font-size: 1.75rem;
+    margin: 2.5rem;
+    color: #fe9700;
+}
+
+.list__cards {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2px;
+    padding: 0 1px;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+  
+
+  .card__skeleton {
+    width: 200px;
+    height: 300px;
+    margin: 0.19rem;
+    z-index: 0;
+    border-radius: 10px;
+    animation: shimmer 1.5s infinite;
+    background: linear-gradient(-90deg, #2c2c2c 0%, #3a3a3a 50%, #2c2c2c 100%);
+  }
+  
+  
+  @keyframes shimmer {
+    0% {
+      background-position: -300px 0;
+    }
+    100% {
+      background-position: 300px 0;
+    }
+}
+  
+.no-results {
+    color: #ff0000;
+    display: contents;
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 20px;
+    margin-left: 600px;
+  }
+
