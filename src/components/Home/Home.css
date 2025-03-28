@@ -113,8 +113,8 @@
 
 .home__logout-container {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 2px;
+  right: 2px;
   z-index: 3;
 }
 

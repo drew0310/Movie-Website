@@ -1,0 +1,158 @@
+.reviews-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 20px;
+}
+
+/* Review container for vertical scrolling */
+.reviews-container {
+    display: flex;
+    flex-direction: column;
+    max-height: 300px; /* Adjust as needed */
+    overflow-y: auto;
+    gap: 15px;
+    padding: 10px;
+    scroll-behavior: smooth;
+    width: 350px;
+    border-radius: 10px;
+    background: #111;
+    padding: 15px;
+}
+
+/* Scrollbar for vertical review container */
+.reviews-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.reviews-container::-webkit-scrollbar-thumb {
+    background: #fe9700;
+    border-radius: 4px;
+}
+
+/* Review card styles */
+.review-card {
+    padding: 1rem;
+    border-radius: 10px;
+    background: #222;
+    color: white;
+    text-align: center;
+}
+
+/* User's review styling */
+.user-review {
+    border: 2px solid #fe9700;
+}
+
+/* Star rating styles */
+.star-rating {
+    display: flex;
+    gap: 5px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.star {
+    color: #444;
+    transition: color 0.3s ease;
+}
+
+.star.filled {
+    color: #fe9700;
+}
+
+/* Star display (for existing reviews) */
+.star-display {
+    font-size: 20px;
+    color: #fe9700;
+}
+
+/* Review input section */
+.add-review {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.add-review textarea {
+    width: 90%;
+    height: 100px;
+    border-radius: 8px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: #333;
+    color: white;
+    font-size: 16px;
+}
+
+.add-review button {
+    background: #fe9700;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.add-review button:hover {
+    transform: scale(1.2);
+    transition: 0.5s ease;
+}
+
+/* Circular rating display */
+.average-rating {
+    display: contents;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    padding: 15px;
+    height: 300px;
+    width: 150px;
+}
+
+.rating-circle {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    left: 120px;
+    width: 100px;
+    height: 100px;
+}
+
+.rating-circle svg {
+    transform: rotate(-90deg);
+}
+
+.rating-bg {
+    fill: none;
+    stroke: #444;
+    stroke-width: 10;
+}
+
+.rating-progress {
+    fill: none;
+    stroke: #fe9700;
+    stroke-width: 10;
+    stroke-linecap: round;
+    stroke-dasharray: 283;
+    stroke-dashoffset: 283;
+    transition: stroke-dashoffset 1s ease-out;
+}
+
+.rating-circle span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}

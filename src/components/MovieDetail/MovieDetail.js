@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import './MovieDetail.css';
 import axios from 'axios';
-import Header from '../Header/Header';
+import Review from '../Review/Review';
 
 
 const MovieDetail = () => {
@@ -65,8 +65,6 @@ const MovieDetail = () => {
 
   return (
     <>
-    {console.log(movie)}
-    <Header />
     <div className="movie">
       <div className="movie__intro">
         <div className="slideshow__container">
@@ -120,20 +118,23 @@ const MovieDetail = () => {
 
       <div className="trailer">
         <div className="trailer_heading">Trailer/Teaser</div>
-        {!trailerUrl ? (
-          <button className="watchTrailerBtn" onClick={fetchTrailer}>
-            Watch Trailer
-          </button>
-        ) : (
-          <iframe
-            src={trailerUrl}
-            title='Movie trailer'
-            width="1200"
-            height="550"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-        )}
+          {!trailerUrl ? (
+            <button className="watchTrailerBtn" onClick={fetchTrailer}>
+              Watch Trailer
+            </button>
+          ) : (
+            <div className="trailer_container">
+              <button className="closeTrailerBtn" onClick={() => setTrailerUrl(null)}>×</button>
+                <iframe
+                  src={trailerUrl}
+                  title="Movie trailer"
+                  width="1200"
+                  height="550"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+            </div>
+          )}
       </div>
 
    
@@ -150,6 +151,9 @@ const MovieDetail = () => {
           </div>
         ))}
       </div>
+
+      <div className="movie__heading">Reviews</div>
+      {movie && movie.title && movie.release_date && <Review movie={movie} />} 
 
       {movieData.watch_link && movieData.watch_link.length > 0 && (
         <div className="movie__watchLinks">
