@@ -6,11 +6,11 @@
     padding: 20px;
 }
 
-/* Review container for vertical scrolling */
+
 .reviews-container {
     display: flex;
     flex-direction: column;
-    max-height: 300px; /* Adjust as needed */
+    max-height: 300px; 
     overflow-y: auto;
     gap: 15px;
     padding: 10px;
@@ -21,7 +21,7 @@
     padding: 15px;
 }
 
-/* Scrollbar for vertical review container */
+
 .reviews-container::-webkit-scrollbar {
     width: 6px;
 }
@@ -31,7 +31,7 @@
     border-radius: 4px;
 }
 
-/* Review card styles */
+
 .review-card {
     padding: 1rem;
     border-radius: 10px;
@@ -40,12 +40,12 @@
     text-align: center;
 }
 
-/* User's review styling */
+
 .user-review {
     border: 2px solid #fe9700;
 }
 
-/* Star rating styles */
+
 .star-rating {
     display: flex;
     gap: 5px;
@@ -62,13 +62,13 @@
     color: #fe9700;
 }
 
-/* Star display (for existing reviews) */
+
 .star-display {
     font-size: 20px;
     color: #fe9700;
 }
 
-/* Review input section */
+
 .add-review {
     display: flex;
     flex-direction: column;
@@ -107,7 +107,7 @@
     transition: 0.5s ease;
 }
 
-/* Circular rating display */
+
 .average-rating {
     display: contents;
     justify-content: center;
@@ -156,3 +156,90 @@
     font-weight: bold;
     color: white;
 }
+
+.review-card {
+    position: relative;
+    background-color: #1c1c1c;
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px 0;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.review-card:hover {
+    transform: scale(1.02);
+}
+
+.review-card.user-review {
+    border: 2px solid #fe9700;
+}
+
+.review-actions {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 8px;
+}
+
+.review-actions .edit-icon,
+.review-actions .delete-icon {
+    cursor: pointer;
+    font-size: 18px;
+    color: #ccc;
+    transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.review-actions .edit-icon:hover {
+    color: #fe9700;
+    transform: scale(1.2);
+}
+
+.review-actions .delete-icon:hover {
+    color: #ff4d4d;
+    transform: scale(1.2);
+}
+
+.editable-textarea {
+    width: 90%;
+    height: 60px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #333;
+    color: #fff;
+    resize: none;
+}
+
+.submit-icon {
+    font-size: 20px;
+    color: #ccc;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.close-icon {
+    font-size: 20px;
+    color: #ccc;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    right: 40px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.submit-icon:hover,
+.close-icon:hover {
+    transform: scale(1.2);
+    color: #fe9700;
+    transition: 0.2s ease-in-out;
+}
+
+
+
+
