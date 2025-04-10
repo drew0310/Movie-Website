@@ -1,6 +1,6 @@
 # Cineflix - A Movie Information and Review Website
 
-A movie discovery website crafted in collaboration with [Ramakrishnan Venkatesan](https://github.com/ramakrishnan_2002) that allows users to search for movies, view detailed movie information, watch trailers, and post reviews and ratings. The website is powered by **React** for the front end and **FastAPI** for the back end, with movie data sourced through **web scraping from TMDb** and stored in **MongoDB**. The project is deployed using **Netlify**.
+A movie discovery website crafted in collaboration with [Ramakrishnan Venkatesan](https://github.com/Ramakrishnan-2002) that allows users to search for movies, view detailed movie information, watch trailers, and post reviews and ratings. The website is powered by **React** for the front end and **FastAPI** for the back end, with movie data sourced through **web scraping from TMDb** and stored in **MongoDB**. The project is deployed using **Netlify**.
 
 ## Features
 - Search for movies by title
