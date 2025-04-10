@@ -40,6 +40,7 @@ const MovieCategory = () => {
   return (
     <div>
       <Header />
+      <h1><center>{type.toUpperCase()} MOVIES</center></h1>
       <MovieList movies={movies} loading={loading} />
     </div>
   )
